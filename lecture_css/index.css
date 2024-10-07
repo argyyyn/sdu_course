@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fw-bold {
+    font-weight: 900;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.m-auto {
+    margin: auto;
+    display: block;
+}
+
+header {
+    background-image: url("../img/bmw-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+section {
+    padding: 50px 0;
+}
+
+header {
+    padding: 100px 0;
+}
+
+header h1 {
+    font-size: 40px;
+    color: white;
+}
+
+header p {
+    font-size: 20px;
+    color: white;
+}
+
+.btn {
+    font-size: 22px;
+    border: none;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 100px;
+}
+
+.btn--success {
+    background-color: green;
+    color: white;
+}
+
+header .content {
+    width: 50%;
+}
+
+.section-faq .my-img {
+    width: 300px;
+    height: 600px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.section-faq .btn--success {
+    margin-top: 40px;
+}
+
+.section-faq .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+.section-faq ul img {
+    border-radius: 100%;
+}
+
+
+.section-faq ul {
+    margin: 0;
+    padding: 0;
+}
+
+.section-faq li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.section-faq .content div {
+
+}
+
+.section-feedback .feedbacks {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feedback {
+    width: 30%;
+    margin-bottom: 30px;
+
+    &:first-child {
+        background-color: blue;
+    }
+
+    &:last-child {
+        background-color: red;
+    }
+
+    &:nth-child(4) {
+        background-color: green;
+    }
+
+    &:nth-child(even) {
+        background-color: yellow;
+    }
+
+    &:nth-child(odd) {
+        background-color: green;
+    }
+
+    &:not(:nth-child(5)) {
+        border-bottom: 4px solid pink;
+    }
+
+
+
+
+    > div {
+        padding: 16px;
+        border: 1px solid rgba(0,0,0,.5);
+        border-radius: 16px;
+        transition: .3s;
+    }
+
+    &:hover {
+        > div {
+            transform: scaleX(-1);
+            /*background-color: white;*/
+        }
+    }
+}
+
+.feedback-first {
+    background-color: black;
+}
+
+
+
+.feedback h3 {
+    margin: 10px 0 20px;
+}
+
+.feedback span {
+    color: rgba(0, 0, 0, .5);
+}
+
+
+/*
+    1400px -> large desktop size
+    1366px -> desktop size (laptops)
+    992px - 1366px -> rotated tables
+    768px - 992px -> rotated mobile devices
+    768px -> mobile device
+*/
+
+@media (max-width: 992px) {
+
+}
+
+
+@media (max-width: 768px) {
+
+
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    header {
+        background-image: url("../img/bmw-mobile.webp");
+
+        .content {
+            width: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .4);
+            position: absolute;
+        }
+    }
+
+    .section-faq {
+        .content {
+            display: block;
+        }
+
+        .my-img {
+            width: 50%;
+            display: block;
+            margin: auto;
+            height: auto;
+        }
+    }
+
+    .section-carousel {
+        display: none;
+    }
+
+
+    .section-feedback {
+        .feedbacks {
+            flex-direction: column;
+
+            .feedback {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,33 @@
+.section-articles .card {
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+
+
+.card {
+}
+
+.cc {
+}
+
+.section-articles .col-md-4:not(:first-child) .cc:hover .card {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.section-articles .col-md-4:nth-child(even) .cc:hover {
+    opacity: 0.5;
+    transition: .3s;
+}
+
+.section-articles .col-md-4:nth-child(odd) .cc:hover {
+    border: 10px solid red;
+}
+
+
+.section-articles .col-md-4:first-child .cc:hover {
+    display: none;
+}
+
